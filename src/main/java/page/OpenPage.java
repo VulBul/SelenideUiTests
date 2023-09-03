@@ -5,10 +5,10 @@ import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.Step;
 
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Selenide.open;
 
 public class OpenPage {
-      @Step("Открыть страницу приложения")
+    @Step("Открыть страницу приложения")
     public static void loginPage() {
 
         open(BaseConfig.getUrl());
@@ -21,10 +21,6 @@ public class OpenPage {
     public static void closePage() {
         Selenide.closeWebDriver();
     }
-
-
-
-
 
 
 }

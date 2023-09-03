@@ -1,7 +1,6 @@
 import alerts.WindowAlert;
 import com.codeborne.selenide.AssertionMode;
 import com.codeborne.selenide.Configuration;
-import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.junit5.SoftAssertsExtension;
 import elements.PaymentForm;
 import org.junit.jupiter.api.AfterEach;
@@ -73,7 +72,7 @@ public class MainPageTest {
     void checkSendIncorrectPaymentForm() {
         PaymentForm paymentForm = new PaymentForm("Оплата по карте");
         PaymentForm.sendPaymentForm(BasePage::buyButtonClick, "0", "08", "23", "0", "333");
-          paymentForm.cardError(); //ошибка сейчас не находит элемент
+        paymentForm.cardError(); //ошибка сейчас не находит элемент
     }
 
 

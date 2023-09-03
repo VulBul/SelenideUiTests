@@ -10,7 +10,7 @@ public class BaseConfig {
     static {
 
         properties = new Properties();
-        try(FileInputStream fileProperties = new FileInputStream("src/main/resources/configResponse.properties")){
+        try (FileInputStream fileProperties = new FileInputStream("src/main/resources/configResponse.properties")) {
             properties.load(fileProperties);
         } catch (IOException e) {
             throw new RuntimeException(e);
